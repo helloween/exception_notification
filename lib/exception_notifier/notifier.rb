@@ -5,6 +5,11 @@ class ExceptionNotifier
   class Notifier < ActionMailer::Base
     self.mailer_name = 'exception_notifier'
 
+
+    def self.taguri
+      'tag:ruby.yaml.org,2002:class'
+    end
+
     #Append application view path to the ExceptionNotifier lookup context.
     self.append_view_path "#{File.dirname(__FILE__)}/views"
 
